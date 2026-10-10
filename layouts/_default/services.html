@@ -1,149 +1,396 @@
 {{ partial "header.html" . }}
 
 <!-- Page Hero -->
-<section class="bg-primary text-white py-20 relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10 pointer-events-none">
+<section class="bg-primary text-white py-24 relative overflow-hidden">
+    <!-- Ambient background effects -->
+    <div class="absolute inset-0 opacity-15 pointer-events-none">
         <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
             <polygon fill="#FF6B00" points="0,100 100,0 100,100"/>
         </svg>
     </div>
-    <div class="container mx-auto px-6 text-center max-w-3xl relative z-10">
-        <h4 class="text-accent tracking-widest font-bold uppercase mb-4 text-sm bg-primary bg-opacity-50 inline-block px-4 py-1 rounded-full border border-gray-700">Service Portfolio</h4>
-        <h1 class="text-4xl md:text-6xl font-heading font-extrabold mb-6 leading-tight">Flexible <span class="text-accent">Engagement Models</span></h1>
-        <p class="text-xl text-gray-300 leading-relaxed">From permanent placements and C-suite searches to full RPO outsourcing — we scale to your hiring needs with precision and speed.</p>
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-accent opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-accent opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="container mx-auto px-6 text-center max-w-4xl relative z-10">
+        <div class="inline-flex items-center gap-2 bg-white bg-opacity-10 border border-gray-700 px-4 py-1.5 rounded-full mb-6 text-xs uppercase tracking-widest text-accent font-bold">
+            <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+            Enterprise Workforce Solutions
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold mb-6 leading-tight">
+            Flexible Staffing Models Built for <span class="text-accent">Enterprise Velocity</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-10">
+            From single critical niche hires and confidential C-suite executive searches to turnkey recruitment process outsourcing — we calibrate every search to your business speed.
+        </p>
+
+        <!-- Guarantee Pill Strip -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-left">
+            <div class="bg-white bg-opacity-5 border border-gray-700 p-3.5 rounded-xl backdrop-blur-sm">
+                <span class="text-accent text-xs font-bold block uppercase tracking-wider">Fast Turnaround</span>
+                <span class="text-white text-sm font-semibold">12–24h First Shortlist</span>
+            </div>
+            <div class="bg-white bg-opacity-5 border border-gray-700 p-3.5 rounded-xl backdrop-blur-sm">
+                <span class="text-accent text-xs font-bold block uppercase tracking-wider">High Conversion</span>
+                <span class="text-white text-sm font-semibold">&gt;90% Offer-to-Join</span>
+            </div>
+            <div class="bg-white bg-opacity-5 border border-gray-700 p-3.5 rounded-xl backdrop-blur-sm">
+                <span class="text-accent text-xs font-bold block uppercase tracking-wider">Risk-Free</span>
+                <span class="text-white text-sm font-semibold">90-Day Free Replacement</span>
+            </div>
+            <div class="bg-white bg-opacity-5 border border-gray-700 p-3.5 rounded-xl backdrop-blur-sm">
+                <span class="text-accent text-xs font-bold block uppercase tracking-wider">Compliance</span>
+                <span class="text-white text-sm font-semibold">100% Statutory Audited</span>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Core Services Grid -->
-<section class="py-20 bg-light">
+<section class="py-24 bg-light">
     <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h4 class="text-accent font-bold uppercase tracking-wide">What We Offer</h4>
-            <h2 class="text-4xl font-heading font-bold mt-2 text-primary">Our Core Services</h2>
-            <p class="text-secondary mt-4 max-w-2xl mx-auto">Every engagement model is designed around your business velocity — not a one-size-fits-all approach.</p>
+        <div class="text-center mb-16 max-w-2xl mx-auto">
+            <h4 class="text-accent font-bold uppercase tracking-wider text-sm mb-2">Our Capabilities</h4>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary">Core Engagement Models</h2>
+            <p class="text-secondary mt-3">Select the engagement framework that best fits your immediate hiring demands, team structure, and budget.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <!-- Permanent Staffing -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-primary hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center mb-6 text-3xl group-hover:bg-primary transition-colors duration-300">👥</div>
-                <h3 class="text-2xl font-bold mb-3 text-primary">Permanent Staffing</h3>
-                <p class="text-secondary mb-6 text-sm leading-relaxed">Comprehensive vetting and placement of full-time technical and functional specialists. We source, screen, and deliver calibrated candidates within 12–24 hours of requisition kick-off.</p>
-                <ul class="text-sm text-secondary space-y-2 mb-6">
-                    <li class="flex items-start gap-2"><span class="text-accent font-bold mt-0.5">✓</span> Multi-layer technical assessment</li>
-                    <li class="flex items-start gap-2"><span class="text-accent font-bold mt-0.5">✓</span> Behavioral and cultural fit evaluation</li>
-                    <li class="flex items-start gap-2"><span class="text-accent font-bold mt-0.5">✓</span> Background verification &amp; compliance</li>
-                    <li class="flex items-start gap-2"><span class="text-accent font-bold mt-0.5">✓</span> Post-hire engagement support</li>
-                </ul>
-                <div class="border-t border-gray-100 pt-4">
-                    <strong class="block text-primary text-sm mb-1">Calibrated Pipeline</strong>
-                    <span class="text-xs text-secondary">Fastest turnaround time in the market.</span>
+        <div class="grid lg:grid-cols-3 gap-8 mb-16">
+            <!-- 1. Permanent Staffing -->
+            <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md hover:shadow-2xl hover:border-accent transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-orange-50 text-accent rounded-2xl flex items-center justify-center text-3xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                            👥
+                        </div>
+                        <span class="px-3 py-1 bg-gray-100 text-primary text-xs font-bold uppercase tracking-wider rounded-full">
+                            Full-Time Roles
+                        </span>
+                    </div>
+
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-3">Permanent Staffing</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-6">
+                        Targeted discovery, technical evaluation, and placement of full-time engineering and functional specialists. We vet candidates for both technological aptitude and cultural endurance.
+                    </p>
+
+                    <div class="bg-orange-50/60 border border-orange-100 rounded-xl p-3.5 mb-6 text-xs text-primary font-medium flex items-center gap-2">
+                        <span class="text-accent font-bold">⚡ SLA:</span> First calibrated candidate dossier delivered within 12–24 hours.
+                    </div>
+
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-3">What's Included:</h4>
+                    <ul class="space-y-2.5 text-sm text-secondary mb-8">
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-orange-100 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                            <span>Multi-stage technical &amp; architectural qualification</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-orange-100 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                            <span>Compensation benchmarking &amp; counter-offer coaching</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-orange-100 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                            <span>Comprehensive background check &amp; reference validation</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-orange-100 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                            <span>90-day free replacement guarantee</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="border-t border-gray-100 pt-5">
+                    <span class="text-xs text-gray-400 block mb-1">Best suited for:</span>
+                    <span class="text-xs font-semibold text-primary">Core engineering teams, niche stack specialists, high-growth expansion</span>
                 </div>
             </div>
 
-            <!-- Executive Search -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-accent hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-xl flex items-center justify-center mb-6 text-3xl group-hover:bg-accent transition-colors duration-300">👑</div>
-                <h3 class="text-2xl font-bold mb-3 text-primary">Executive Search</h3>
-                <p class="text-secondary mb-6 text-sm leading-relaxed">Targeted leadership recruitment for CEOs, CTOs, CFOs, VPs, Directors, and Country Heads who shape enterprise growth. Conducted with absolute discretion and rigorous market mapping.</p>
-                <ul class="text-sm text-secondary space-y-2 mb-6">
-                    <li class="flex items-start gap-2"><span class="text-accent font-bold mt-0.5">✓</span> C-suite &amp; VP-level mandates</li>
-                    <li class="flex items-start gap-2"><span class="text-accent font-bold mt-0.5">✓</span> Confidential market intelligence</li>
-                    <li class="flex items-start gap-2"><span class="text-accent font-bold mt-0.5">✓</span> Psychometric &amp; leadership profiling</li>
-                    <li class="flex items-start gap-2"><span class="text-accent font-bold mt-0.5">✓</span> Retained search model available</li>
-                </ul>
-                <div class="border-t border-gray-100 pt-4">
-                    <strong class="block text-accent text-sm mb-1">Discreet &amp; Rigorous</strong>
-                    <span class="text-xs text-secondary">High leadership retention rate.</span>
+            <!-- 2. Executive Search (Featured) -->
+            <div class="bg-primary text-white rounded-3xl p-8 border-2 border-accent shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative transform lg:-translate-y-2 group">
+                <div class="absolute -top-3.5 right-6 bg-accent text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+                    High Impact
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-white/10 text-accent rounded-2xl flex items-center justify-center text-3xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                            👑
+                        </div>
+                        <span class="px-3 py-1 bg-white/10 text-accent text-xs font-bold uppercase tracking-wider rounded-full">
+                            C-Suite &amp; Leadership
+                        </span>
+                    </div>
+
+                    <h3 class="text-2xl font-heading font-bold text-white mb-3">Executive Search</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        Discreet, rigorous headhunting for leadership positions that steer business growth: CEOs, CTOs, VP of Engineering, Country Heads, and Architecture Directors.
+                    </p>
+
+                    <div class="bg-white/10 border border-gray-700 rounded-xl p-3.5 mb-6 text-xs text-gray-200 font-medium flex items-center gap-2">
+                        <span class="text-accent font-bold">🔒 Protocol:</span> 100% confidential talent mapping with zero public vacancy disclosure.
+                    </div>
+
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-3">What's Included:</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-300 mb-8">
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                            <span>Exhaustive competitor market landscape mapping</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                            <span>Senior partner-led engagement &amp; discreet headhunting</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                            <span>Executive leadership psychometric &amp; cultural assessment</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                            <span>Comprehensive onboarding &amp; 180-day retention advisory</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="border-t border-gray-800 pt-5">
+                    <span class="text-xs text-gray-400 block mb-1">Best suited for:</span>
+                    <span class="text-xs font-semibold text-accent">Board appointments, CTO/VP engineering mandates, Business unit heads</span>
                 </div>
             </div>
 
-            <!-- RPO Outsourcing -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-primary hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center mb-6 text-3xl group-hover:bg-primary transition-colors duration-300">🏢</div>
-                <h3 class="text-2xl font-bold mb-3 text-primary">RPO Outsourcing</h3>
-                <p class="text-secondary mb-6 text-sm leading-relaxed">Turnkey Recruitment Process Outsourcing driving predictable hiring volume, cost efficiency, and exceptional candidate experience. We act as an embedded extension of your HR team.</p>
-                <ul class="text-sm text-secondary space-y-2 mb-6">
-                    <li class="flex items-start gap-2"><span class="text-accent font-bold mt-0.5">✓</span> End-to-end talent acquisition management</li>
-                    <li class="flex items-start gap-2"><span class="text-accent font-bold mt-0.5">✓</span> Employer branding &amp; candidate experience</li>
-                    <li class="flex items-start gap-2"><span class="text-accent font-bold mt-0.5">✓</span> ATS setup &amp; analytics dashboards</li>
-                    <li class="flex items-start gap-2"><span class="text-accent font-bold mt-0.5">✓</span> SLA-driven delivery with full reporting</li>
-                </ul>
-                <div class="border-t border-gray-100 pt-4">
-                    <strong class="block text-primary text-sm mb-1">Elastic Hiring Capacity</strong>
-                    <span class="text-xs text-secondary">Enterprise SLA compliance guaranteed.</span>
+            <!-- 3. RPO Outsourcing -->
+            <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md hover:shadow-2xl hover:border-accent transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-orange-50 text-accent rounded-2xl flex items-center justify-center text-3xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                            🏢
+                        </div>
+                        <span class="px-3 py-1 bg-gray-100 text-primary text-xs font-bold uppercase tracking-wider rounded-full">
+                            Turnkey Solution
+                        </span>
+                    </div>
+
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-3">RPO Outsourcing</h3>
+                    <p class="text-secondary text-sm leading-relaxed mb-6">
+                        Complete Recruitment Process Outsourcing where Gigworx acts as your dedicated internal talent acquisition unit. We govern pipeline volume, candidate experience, and hiring cost optimization.
+                    </p>
+
+                    <div class="bg-orange-50/60 border border-orange-100 rounded-xl p-3.5 mb-6 text-xs text-primary font-medium flex items-center gap-2">
+                        <span class="text-accent font-bold">📈 Scale:</span> Elastic capacity scaling from 10 to 200+ hires per quarter.
+                    </div>
+
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-3">What's Included:</h4>
+                    <ul class="space-y-2.5 text-sm text-secondary mb-8">
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-orange-100 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                            <span>Dedicated on-site or virtual delivery team &amp; account lead</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-orange-100 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                            <span>Employer brand amplification &amp; candidate experience governance</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-orange-100 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                            <span>ATS workflow configuration, metrics tracking &amp; weekly reporting</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-orange-100 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                            <span>Up to 35% reduction in overall cost-per-hire</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="border-t border-gray-100 pt-5">
+                    <span class="text-xs text-gray-400 block mb-1">Best suited for:</span>
+                    <span class="text-xs font-semibold text-primary">Rapid scaling startups, enterprise R&amp;D centers, annual hiring ramp-ups</span>
                 </div>
             </div>
         </div>
 
-        <!-- Additional Services -->
+        <!-- Secondary Services Cards -->
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-accent flex gap-6 hover:shadow-xl transition-all duration-300">
-                <div class="w-14 h-14 bg-accent bg-opacity-10 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">📋</div>
+            <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-row gap-6 items-start">
+                <div class="w-16 h-16 bg-orange-50 text-accent rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                    📋
+                </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-2 text-primary">Contract &amp; Contract-to-Hire</h3>
-                    <p class="text-secondary text-sm leading-relaxed mb-4">Rapidly deploy skilled contractors for project-based engagements with seamless conversion options. Ideal for surge demand, product launches, or proof-of-concept phases.</p>
-                    <ul class="text-sm text-secondary space-y-1">
-                        <li class="flex items-start gap-2"><span class="text-accent font-bold">✓</span> Short-term to multi-year contracts</li>
-                        <li class="flex items-start gap-2"><span class="text-accent font-bold">✓</span> Payroll &amp; statutory compliance management</li>
-                        <li class="flex items-start gap-2"><span class="text-accent font-bold">✓</span> Instant skill-gap bridging</li>
-                    </ul>
+                    <div class="flex items-center gap-3 mb-2">
+                        <h3 class="text-xl font-heading font-bold text-primary">Contract &amp; Contract-to-Hire Staffing</h3>
+                        <span class="text-[11px] font-bold uppercase tracking-wider bg-gray-100 text-secondary px-2.5 py-0.5 rounded-full">Agile</span>
+                    </div>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Rapidly mobilize specialized engineers on flexible contracts without increasing permanent headcount. Seamless conversion pathways available after milestone delivery.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-medium text-secondary">
+                        <span class="bg-gray-100 px-3 py-1 rounded-lg">Surge capacity</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-lg">Zero payroll overhead</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-lg">Statutory compliant</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-lg">Instant onboarding</span>
+                    </div>
                 </div>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-primary flex gap-6 hover:shadow-xl transition-all duration-300">
-                <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">🎓</div>
+
+            <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-row gap-6 items-start">
+                <div class="w-16 h-16 bg-orange-50 text-accent rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                    🎓
+                </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-2 text-primary">Campus &amp; Diversity Hiring</h3>
-                    <p class="text-secondary text-sm leading-relaxed mb-4">Structured campus recruitment programs from India's premier engineering and management institutions, with dedicated diversity hiring pipelines for inclusive teams.</p>
-                    <ul class="text-sm text-secondary space-y-1">
-                        <li class="flex items-start gap-2"><span class="text-accent font-bold">✓</span> IIT, NIT, IIM campus partnerships</li>
-                        <li class="flex items-start gap-2"><span class="text-accent font-bold">✓</span> Diversity &amp; women-in-tech initiatives</li>
-                        <li class="flex items-start gap-2"><span class="text-accent font-bold">✓</span> Fresher onboarding programs</li>
-                    </ul>
+                    <div class="flex items-center gap-3 mb-2">
+                        <h3 class="text-xl font-heading font-bold text-primary">Campus &amp; Diversity Recruitment</h3>
+                        <span class="text-[11px] font-bold uppercase tracking-wider bg-gray-100 text-secondary px-2.5 py-0.5 rounded-full">Future Talent</span>
+                    </div>
+                    <p class="text-secondary text-sm leading-relaxed mb-4">
+                        Structured fresher recruitment drives across Tier-1 and Tier-2 engineering colleges, paired with dedicated Diversity, Equity &amp; Inclusion (DEI) pipelines for high-performing teams.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-medium text-secondary">
+                        <span class="bg-gray-100 px-3 py-1 rounded-lg">Hackathons &amp; drives</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-lg">Women in Tech pipelines</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-lg">Campus partnerships</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-lg">Pre-assessed cohorts</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Recruitment Process -->
-<section class="py-20 bg-white">
+<!-- Engagement Comparison Matrix -->
+<section class="py-20 bg-white border-y border-gray-200">
     <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h4 class="text-accent font-bold uppercase tracking-wide">How It Works</h4>
-            <h2 class="text-4xl font-heading font-bold mt-2 text-primary">Our Proven Recruitment Process</h2>
+        <div class="text-center mb-16 max-w-2xl mx-auto">
+            <h4 class="text-accent font-bold uppercase tracking-wider text-sm mb-2">Model Comparison</h4>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary">Compare Engagement Options</h2>
+            <p class="text-secondary mt-3">Find the exact operational model suited for your enterprise requirements.</p>
         </div>
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="text-center">
-                <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">1</div>
-                <h4 class="font-bold text-primary mb-2 text-lg">Discovery Call</h4>
-                <p class="text-sm text-secondary leading-relaxed">We deeply understand your role requirements, tech stack, team culture, and growth roadmap.</p>
+
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse min-w-[700px]">
+                <thead>
+                    <tr class="border-b-2 border-gray-200 bg-gray-50/80">
+                        <th class="py-4 px-6 text-sm font-bold text-primary">Parameters</th>
+                        <th class="py-4 px-6 text-sm font-bold text-primary">Permanent Staffing</th>
+                        <th class="py-4 px-6 text-sm font-bold text-accent">Executive Search</th>
+                        <th class="py-4 px-6 text-sm font-bold text-primary">RPO Outsourcing</th>
+                        <th class="py-4 px-6 text-sm font-bold text-primary">Contract Staffing</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 text-sm">
+                    <tr class="hover:bg-gray-50/50 transition">
+                        <td class="py-4 px-6 font-semibold text-primary">Initial Turnaround</td>
+                        <td class="py-4 px-6 text-secondary">12–24 Hours</td>
+                        <td class="py-4 px-6 font-semibold text-accent">3–5 Days (Deep Market Scan)</td>
+                        <td class="py-4 px-6 text-secondary">Continuous SLA Delivery</td>
+                        <td class="py-4 px-6 text-secondary">24–48 Hours</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50/50 transition">
+                        <td class="py-4 px-6 font-semibold text-primary">Model Type</td>
+                        <td class="py-4 px-6 text-secondary">Success-based (Contingency)</td>
+                        <td class="py-4 px-6 font-semibold text-accent">Retained / Hybrid Mandate</td>
+                        <td class="py-4 px-6 text-secondary">Dedicated Team Retainer + Success</td>
+                        <td class="py-4 px-6 text-secondary">Monthly Rate / T&amp;M</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50/50 transition">
+                        <td class="py-4 px-6 font-semibold text-primary">Target Seniority</td>
+                        <td class="py-4 px-6 text-secondary">Mid to Senior Specialists</td>
+                        <td class="py-4 px-6 font-semibold text-accent">Directors, VPs, C-Suite</td>
+                        <td class="py-4 px-6 text-secondary">All Levels (Volume)</td>
+                        <td class="py-4 px-6 text-secondary">Individual Contributors / Pods</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50/50 transition">
+                        <td class="py-4 px-6 font-semibold text-primary">Replacement Warranty</td>
+                        <td class="py-4 px-6 text-secondary">90 Days Free</td>
+                        <td class="py-4 px-6 font-semibold text-accent">180 Days Free</td>
+                        <td class="py-4 px-6 text-secondary">Immediate Re-allocation</td>
+                        <td class="py-4 px-6 text-secondary">48-Hour Replacement</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50/50 transition">
+                        <td class="py-4 px-6 font-semibold text-primary">Account Management</td>
+                        <td class="py-4 px-6 text-secondary">Domain Account Lead</td>
+                        <td class="py-4 px-6 font-semibold text-accent">Managing Partner</td>
+                        <td class="py-4 px-6 text-secondary">Embedded Delivery Lead</td>
+                        <td class="py-4 px-6 text-secondary">Operations Manager</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- 4-Step Recruitment Process -->
+<section class="py-24 bg-light">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16 max-w-2xl mx-auto">
+            <h4 class="text-accent font-bold uppercase tracking-wider text-sm mb-2">Our Methodology</h4>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary">Precision 4-Step Hiring Process</h2>
+            <p class="text-secondary mt-3">From requisition alignment to post-offer joining, our workflow is engineered to eliminate false positives.</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6 relative">
+            <!-- Step 1 -->
+            <div class="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 relative group">
+                <div class="w-12 h-12 rounded-xl bg-orange-100 text-accent font-heading font-extrabold text-xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-white transition-colors">
+                    01
+                </div>
+                <h3 class="text-lg font-heading font-bold text-primary mb-2">Calibrated Brief</h3>
+                <p class="text-secondary text-sm leading-relaxed mb-4">
+                    In-depth briefing with your engineering managers to establish must-haves, stack depth, and team culture dynamics.
+                </p>
+                <span class="inline-block px-2.5 py-1 bg-gray-100 text-primary text-xs font-semibold rounded-md">Timeline: Day 1</span>
             </div>
-            <div class="text-center">
-                <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">2</div>
-                <h4 class="font-bold text-primary mb-2 text-lg">Talent Mapping</h4>
-                <p class="text-sm text-secondary leading-relaxed">Our specialized recruiters activate curated talent pools and headhunt from competitor landscapes.</p>
+
+            <!-- Step 2 -->
+            <div class="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 relative group">
+                <div class="w-12 h-12 rounded-xl bg-orange-100 text-accent font-heading font-extrabold text-xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-white transition-colors">
+                    02
+                </div>
+                <h3 class="text-lg font-heading font-bold text-primary mb-2">Deep Sourcing</h3>
+                <p class="text-secondary text-sm leading-relaxed mb-4">
+                    Activation of proprietary talent databases, targeted competitor mapping, and proactive headhunting across passive pools.
+                </p>
+                <span class="inline-block px-2.5 py-1 bg-gray-100 text-primary text-xs font-semibold rounded-md">Timeline: Day 1–2</span>
             </div>
-            <div class="text-center">
-                <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">3</div>
-                <h4 class="font-bold text-primary mb-2 text-lg">Calibrated Shortlist</h4>
-                <p class="text-sm text-secondary leading-relaxed">Vetted profiles delivered within 12–24 hours, complete with technical assessments and cultural fit notes.</p>
+
+            <!-- Step 3 -->
+            <div class="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 relative group">
+                <div class="w-12 h-12 rounded-xl bg-orange-100 text-accent font-heading font-extrabold text-xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-white transition-colors">
+                    03
+                </div>
+                <h3 class="text-lg font-heading font-bold text-primary mb-2">Screening &amp; Vetting</h3>
+                <p class="text-secondary text-sm leading-relaxed mb-4">
+                    Rigorous technical pre-screening, architectural aptitude check, compensation alignment, and notice period verification.
+                </p>
+                <span class="inline-block px-2.5 py-1 bg-gray-100 text-primary text-xs font-semibold rounded-md">Timeline: Day 2–3</span>
             </div>
-            <div class="text-center">
-                <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">4</div>
-                <h4 class="font-bold text-primary mb-2 text-lg">Offer &amp; Close</h4>
-                <p class="text-sm text-secondary leading-relaxed">We manage offer negotiations, counter-offer coaching, and post-offer engagement to ensure successful joining.</p>
+
+            <!-- Step 4 -->
+            <div class="bg-white p-7 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 relative group">
+                <div class="w-12 h-12 rounded-xl bg-orange-100 text-accent font-heading font-extrabold text-xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-white transition-colors">
+                    04
+                </div>
+                <h3 class="text-lg font-heading font-bold text-primary mb-2">Offer &amp; Onboarding</h3>
+                <p class="text-secondary text-sm leading-relaxed mb-4">
+                    Facilitated interviews, expectation harmonization, counter-offer management, and continuous engagement until successful day-1 joining.
+                </p>
+                <span class="inline-block px-2.5 py-1 bg-gray-100 text-primary text-xs font-semibold rounded-md">Timeline: Day 4–10</span>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
-<section class="py-16 bg-primary text-white text-center">
-    <div class="container mx-auto px-6 max-w-2xl">
-        <h2 class="text-3xl font-heading font-bold mb-4">Start Your Next Great Hire Today</h2>
-        <p class="text-gray-300 mb-8">Share your requirements and our team will reach out within 24 hours with a tailored recruitment strategy.</p>
-        <a href="/#contact" class="bg-accent text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition shadow-lg inline-block transform hover:-translate-y-1">Get in Touch</a>
+<!-- Call to Action -->
+<section class="py-20 bg-primary text-white relative overflow-hidden">
+    <div class="container mx-auto px-6 text-center max-w-3xl relative z-10">
+        <h2 class="text-3xl md:text-5xl font-heading font-extrabold mb-5">
+            Ready to Accelerate Your <span class="text-accent">Hiring Velocity?</span>
+        </h2>
+        <p class="text-gray-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+            Discuss your open requisitions with our senior practice leads. We will prepare a customized talent mapping strategy within 24 hours.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="/#contact" class="bg-accent text-white px-8 py-4 rounded-full font-bold text-base hover:bg-orange-600 transition shadow-lg inline-block transform hover:-translate-y-1">
+                Schedule a Consultation
+            </a>
+            <a href="/expertise/" class="border-2 border-white/20 hover:border-white text-white px-8 py-4 rounded-full font-bold text-base hover:bg-white/10 transition inline-block">
+                Explore Technology Expertise →
+            </a>
+        </div>
     </div>
 </section>
 

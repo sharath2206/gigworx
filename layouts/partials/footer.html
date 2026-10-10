@@ -67,26 +67,62 @@
                 });
             });
 
-            // Navbar active state highlighting
-            const sections = document.querySelectorAll('section[id], footer[id]');
+            // Multi-page aware active navigation highlighting
+            const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
             const navLinks = document.querySelectorAll('.nav-link');
 
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (pageYOffset >= (sectionTop - 250)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
+            function syncActiveNav() {
                 navLinks.forEach(a => {
-                    a.classList.remove('text-accent');
-                    if (a.getAttribute('href') === `#${current}`) {
-                        a.classList.add('text-accent');
+                    const href = a.getAttribute('href');
+                    if (!href) return;
+                    
+                    if (href === '/#contact' || href === '#contact') {
+                        if (window.location.hash === '#contact') {
+                            a.classList.add('text-accent', 'font-bold');
+                            if (!a.classList.contains('block')) a.classList.add('border-accent');
+                        }
+                        return;
+                    }
+
+                    const linkPath = href.split('#')[0].replace(/\/$/, '') || '/';
+                    if (linkPath === currentPath) {
+                        a.classList.add('text-accent', 'font-bold');
+                        if (!a.classList.contains('block')) {
+                            a.classList.add('border-accent');
+                            a.classList.remove('border-transparent');
+                        } else {
+                            a.classList.add('bg-orange-50', 'text-accent');
+                        }
                     }
                 });
-            });
+            }
+            syncActiveNav();
+
+            // On home page only, update contact nav on scroll
+            if (window.location.pathname === '/' || window.location.pathname === '') {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    window.addEventListener('scroll', () => {
+                        const contactTop = contactSection.offsetTop - 300;
+                        const contactLinks = document.querySelectorAll('a[href="/#contact"], a[href="#contact"]');
+                        const homeLinks = document.querySelectorAll('a[href="/"]');
+
+                        if (window.pageYOffset >= contactTop) {
+                            contactLinks.forEach(l => l.classList.add('text-accent', 'font-bold'));
+                            homeLinks.forEach(l => {
+                                l.classList.remove('text-accent', 'font-bold', 'border-accent');
+                                l.classList.add('text-secondary', 'border-transparent');
+                            });
+                        } else {
+                            contactLinks.forEach(l => l.classList.remove('text-accent', 'font-bold'));
+                            homeLinks.forEach(l => {
+                                l.classList.add('text-accent', 'font-bold', 'border-accent');
+                                l.classList.remove('text-secondary', 'border-transparent');
+                            });
+                        }
+                    });
+                }
+            }
         });
     </script>
 </body>

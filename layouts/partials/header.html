@@ -85,31 +85,33 @@
             </a>
             
             <!-- Desktop Menu -->
-            <div class="hidden lg:flex space-x-8 text-sm font-semibold text-secondary">
-                <a href="/about/" class="nav-link hover:text-accent transition">About</a>
-                <a href="/services/" class="nav-link hover:text-accent transition">Services</a>
-                <a href="/expertise/" class="nav-link hover:text-accent transition">Expertise</a>
-                <a href="/why-us/" class="nav-link hover:text-accent transition">Why Us</a>
-                <a href="/#contact" class="nav-link hover:text-accent transition">Contact</a>
+            <div class="hidden lg:flex space-x-8 text-sm font-semibold items-center">
+                <a href="/" class="nav-link transition pb-1 border-b-2 {{ if .IsHome }}text-accent font-bold border-accent{{ else }}text-secondary hover:text-accent border-transparent{{ end }}">Home</a>
+                <a href="/about/" class="nav-link transition pb-1 border-b-2 {{ if eq .RelPermalink "/about/" }}text-accent font-bold border-accent{{ else }}text-secondary hover:text-accent border-transparent{{ end }}">About</a>
+                <a href="/services/" class="nav-link transition pb-1 border-b-2 {{ if eq .RelPermalink "/services/" }}text-accent font-bold border-accent{{ else }}text-secondary hover:text-accent border-transparent{{ end }}">Services</a>
+                <a href="/expertise/" class="nav-link transition pb-1 border-b-2 {{ if eq .RelPermalink "/expertise/" }}text-accent font-bold border-accent{{ else }}text-secondary hover:text-accent border-transparent{{ end }}">Expertise</a>
+                <a href="/why-us/" class="nav-link transition pb-1 border-b-2 {{ if eq .RelPermalink "/why-us/" }}text-accent font-bold border-accent{{ else }}text-secondary hover:text-accent border-transparent{{ end }}">Why Us</a>
+                <a href="/#contact" class="nav-link text-secondary hover:text-accent transition pb-1 border-b-2 border-transparent">Contact</a>
             </div>
             
-            <a href="/#contact" class="hidden lg:inline-block bg-accent text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition shadow-md">Partner With Us</a>
+            <a href="/#contact" class="hidden lg:inline-block bg-accent text-white px-6 py-2.5 rounded-full font-semibold hover:bg-orange-600 transition shadow-md hover:shadow-orange-200">Partner With Us</a>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="lg:hidden text-primary focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="mobile-menu-btn" class="lg:hidden text-primary focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 lg:hidden flex-col py-6 px-6 space-y-6 text-center text-lg text-secondary font-semibold z-40">
-            <a href="/about/" class="nav-link block hover:text-accent transition">About</a>
-            <a href="/services/" class="nav-link block hover:text-accent transition">Services</a>
-            <a href="/expertise/" class="nav-link block hover:text-accent transition">Expertise</a>
-            <a href="/why-us/" class="nav-link block hover:text-accent transition">Why Us</a>
-            <a href="/#contact" class="nav-link block hover:text-accent transition">Contact</a>
-            <a href="/#contact" class="inline-block bg-accent text-white px-8 py-3 mx-auto rounded-full font-semibold hover:bg-orange-600 transition shadow-md w-full max-w-xs">Partner With Us</a>
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 lg:hidden flex-col py-6 px-6 space-y-3 text-center text-base text-secondary font-semibold z-40">
+            <a href="/" class="nav-link block py-2.5 px-4 rounded-xl transition {{ if .IsHome }}text-accent font-bold bg-orange-50{{ else }}hover:text-accent hover:bg-gray-50{{ end }}">Home</a>
+            <a href="/about/" class="nav-link block py-2.5 px-4 rounded-xl transition {{ if eq .RelPermalink "/about/" }}text-accent font-bold bg-orange-50{{ else }}hover:text-accent hover:bg-gray-50{{ end }}">About</a>
+            <a href="/services/" class="nav-link block py-2.5 px-4 rounded-xl transition {{ if eq .RelPermalink "/services/" }}text-accent font-bold bg-orange-50{{ else }}hover:text-accent hover:bg-gray-50{{ end }}">Services</a>
+            <a href="/expertise/" class="nav-link block py-2.5 px-4 rounded-xl transition {{ if eq .RelPermalink "/expertise/" }}text-accent font-bold bg-orange-50{{ else }}hover:text-accent hover:bg-gray-50{{ end }}">Expertise</a>
+            <a href="/why-us/" class="nav-link block py-2.5 px-4 rounded-xl transition {{ if eq .RelPermalink "/why-us/" }}text-accent font-bold bg-orange-50{{ else }}hover:text-accent hover:bg-gray-50{{ end }}">Why Us</a>
+            <a href="/#contact" class="nav-link block py-2.5 px-4 rounded-xl hover:text-accent hover:bg-gray-50 transition">Contact</a>
+            <a href="/#contact" class="inline-block bg-accent text-white px-8 py-3 mx-auto rounded-full font-semibold hover:bg-orange-600 transition shadow-md w-full max-w-xs mt-2">Partner With Us</a>
         </div>
     </nav>

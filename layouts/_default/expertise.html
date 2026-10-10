@@ -1,159 +1,362 @@
 {{ partial "header.html" . }}
 
 <!-- Page Hero -->
-<section class="bg-primary text-white py-20 relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10 pointer-events-none">
+<section class="bg-primary text-white py-24 relative overflow-hidden">
+    <!-- Ambient background effects -->
+    <div class="absolute inset-0 opacity-15 pointer-events-none">
         <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
             <polygon fill="#FF6B00" points="0,100 100,0 100,100"/>
         </svg>
     </div>
-    <div class="container mx-auto px-6 text-center max-w-3xl relative z-10">
-        <h4 class="text-accent tracking-widest font-bold uppercase mb-4 text-sm bg-primary bg-opacity-50 inline-block px-4 py-1 rounded-full border border-gray-700">Technical Capabilities</h4>
-        <h1 class="text-4xl md:text-6xl font-heading font-extrabold mb-6 leading-tight">Technology <span class="text-accent">Expertise</span></h1>
-        <p class="text-xl text-gray-300 leading-relaxed">Our recruiters are domain specialists — not generalists. We speak your engineering language across every major technology vertical.</p>
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-accent opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-accent opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="container mx-auto px-6 text-center max-w-4xl relative z-10">
+        <div class="inline-flex items-center gap-2 bg-white bg-opacity-10 border border-gray-700 px-4 py-1.5 rounded-full mb-6 text-xs uppercase tracking-widest text-accent font-bold">
+            <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+            Specialized Tech Recruitment
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold mb-6 leading-tight">
+            Deep Engineering Fluency Across <span class="text-accent">Modern Tech Stacks</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-10">
+            From sub-micron silicon design and AUTOSAR automotive stacks to distributed cloud-native systems and Generative AI — our recruiters speak your engineering language.
+        </p>
+
+        <!-- Stats Counter Pill -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-left">
+            <div class="bg-white bg-opacity-5 border border-gray-700 p-3.5 rounded-xl backdrop-blur-sm">
+                <span class="text-accent text-xs font-bold block uppercase tracking-wider">Depth</span>
+                <span class="text-white text-sm font-semibold">100+ Frameworks Covered</span>
+            </div>
+            <div class="bg-white bg-opacity-5 border border-gray-700 p-3.5 rounded-xl backdrop-blur-sm">
+                <span class="text-accent text-xs font-bold block uppercase tracking-wider">Accuracy</span>
+                <span class="text-white text-sm font-semibold">Zero False Positives</span>
+            </div>
+            <div class="bg-white bg-opacity-5 border border-gray-700 p-3.5 rounded-xl backdrop-blur-sm">
+                <span class="text-accent text-xs font-bold block uppercase tracking-wider">Specialization</span>
+                <span class="text-white text-sm font-semibold">Domain-Dedicated Teams</span>
+            </div>
+            <div class="bg-white bg-opacity-5 border border-gray-700 p-3.5 rounded-xl backdrop-blur-sm">
+                <span class="text-accent text-xs font-bold block uppercase tracking-wider">Speed</span>
+                <span class="text-white text-sm font-semibold">12–24h First Submissions</span>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- Expertise Grid -->
-<section class="py-20 bg-white">
+<!-- Detailed Domains Section -->
+<section class="py-24 bg-light">
     <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h4 class="text-accent font-bold uppercase tracking-wide">Domains We Cover</h4>
-            <h2 class="text-4xl font-heading font-bold mt-2 text-primary">Technology Expertise in Detail</h2>
-            <p class="text-secondary mt-4 max-w-2xl mx-auto">From silicon-level engineering to cloud-native architectures — specialist recruiters embedded in every domain.</p>
+        <div class="text-center mb-16 max-w-2xl mx-auto">
+            <h4 class="text-accent font-bold uppercase tracking-wider text-sm mb-2">Engineering Practices</h4>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary">Core Practice Areas &amp; Capabilities</h2>
+            <p class="text-secondary mt-3">Explore the dedicated practices where our specialized technical search teams operate daily.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Box 1: Enterprise ERP -->
-            <div class="border border-gray-200 rounded-2xl p-8 bg-gray-50 hover:shadow-xl hover:border-accent transition-all duration-300 group">
-                <div class="text-4xl mb-4">☁️</div>
-                <h3 class="font-bold text-xl mb-5 text-primary group-hover:text-accent transition-colors">Enterprise, ERP &amp; Cloud</h3>
-                <div class="space-y-3">
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">ERP &amp; CRM</strong>
-                        <p class="text-xs text-secondary">Oracle EBS, SAP S/4HANA, Microsoft Dynamics 365, Salesforce, Workday</p>
+        <div class="grid lg:grid-cols-2 gap-8 mb-16">
+            <!-- 1. Enterprise, ERP & Cloud -->
+            <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md hover:shadow-2xl hover:border-accent transition-all duration-300 group">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-orange-50 text-accent rounded-2xl flex items-center justify-center text-3xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                        ☁️
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Cloud &amp; Infrastructure</strong>
-                        <p class="text-xs text-secondary">AWS, Azure, GCP, SaaS/PaaS/IaaS, Kubernetes, Terraform, DevOps</p>
+                    <div>
+                        <h3 class="text-2xl font-heading font-bold text-primary">Enterprise, ERP &amp; Cloud</h3>
+                        <span class="text-xs font-semibold text-secondary uppercase tracking-wider">Mission-Critical Business Systems</span>
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">ITSM &amp; CMS</strong>
-                        <p class="text-xs text-secondary">ServiceNow, Adobe AEM, Magento, SharePoint, OpenText</p>
+                </div>
+
+                <p class="text-secondary text-sm leading-relaxed mb-6">
+                    Sourcing certified architects and implementation specialists for tier-1 enterprise platforms and resilient multi-cloud architectures.
+                </p>
+
+                <div class="mb-6">
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-2.5">Key Technologies &amp; Ecosystems</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">SAP S/4HANA</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Oracle Cloud / EBS</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Salesforce (Apex, LWC)</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Microsoft Dynamics 365</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">AWS</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Azure</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">GCP</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Kubernetes</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Terraform</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">ServiceNow</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Adobe AEM</span>
                     </div>
+                </div>
+
+                <div class="border-t border-gray-100 pt-4">
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">High-Demand Roles Placed:</h4>
+                    <p class="text-xs text-primary font-medium leading-relaxed">
+                        Cloud Solutions Architect • SAP Functional Lead • Salesforce Enterprise Architect • DevOps &amp; SRE Director • ServiceNow Technical Consultant
+                    </p>
                 </div>
             </div>
 
-            <!-- Box 2: Data AI -->
-            <div class="border border-gray-200 rounded-2xl p-8 bg-gray-50 hover:shadow-xl hover:border-accent transition-all duration-300 group">
-                <div class="text-4xl mb-4">📊</div>
-                <h3 class="font-bold text-xl mb-5 text-primary group-hover:text-accent transition-colors">Data, AI &amp; Analytics</h3>
-                <div class="space-y-3">
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">AI &amp; Machine Learning</strong>
-                        <p class="text-xs text-secondary">GenAI, LLMs, MLOps, Computer Vision, NLP, Blockchain, TensorFlow, PyTorch</p>
+            <!-- 2. Data, AI & Analytics -->
+            <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md hover:shadow-2xl hover:border-accent transition-all duration-300 group">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-orange-50 text-accent rounded-2xl flex items-center justify-center text-3xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                        📊
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Business Intelligence</strong>
-                        <p class="text-xs text-secondary">Tableau, Power BI, Looker, Qlik, MicroStrategy</p>
+                    <div>
+                        <h3 class="text-2xl font-heading font-bold text-primary">Data, AI &amp; Analytics</h3>
+                        <span class="text-xs font-semibold text-secondary uppercase tracking-wider">Intelligent Systems &amp; Modern Data Stacks</span>
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Big Data &amp; Platforms</strong>
-                        <p class="text-xs text-secondary">Hadoop, Spark, Databricks, Informatica, Snowflake, dbt, Kafka</p>
+                </div>
+
+                <p class="text-secondary text-sm leading-relaxed mb-6">
+                    Connecting organizations with pioneering ML researchers, prompt engineers, MLOps practitioners, and distributed data platform architects.
+                </p>
+
+                <div class="mb-6">
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-2.5">Key Technologies &amp; Ecosystems</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Generative AI / LLMs</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">PyTorch &amp; TensorFlow</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">MLOps (Kubeflow, MLflow)</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Snowflake</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Databricks</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Apache Spark</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Apache Kafka</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">dbt</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Power BI</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Tableau</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Computer Vision / NLP</span>
                     </div>
+                </div>
+
+                <div class="border-t border-gray-100 pt-4">
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">High-Demand Roles Placed:</h4>
+                    <p class="text-xs text-primary font-medium leading-relaxed">
+                        Principal ML Scientist • Data Platform Architect • Generative AI Engineer • MLOps Lead • Big Data Pipeline Engineer
+                    </p>
                 </div>
             </div>
 
-            <!-- Box 3: VLSI -->
-            <div class="border border-gray-200 rounded-2xl p-8 bg-gray-50 hover:shadow-xl hover:border-accent transition-all duration-300 group">
-                <div class="text-4xl mb-4">⚡</div>
-                <h3 class="font-bold text-xl mb-5 text-primary group-hover:text-accent transition-colors">Semiconductors &amp; VLSI</h3>
-                <div class="space-y-3">
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Silicon Engineering</strong>
-                        <p class="text-xs text-secondary">ASIC / RTL Design, Physical Design, DFT, Signoff, Layout</p>
+            <!-- 3. Semiconductors & VLSI -->
+            <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md hover:shadow-2xl hover:border-accent transition-all duration-300 group">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-orange-50 text-accent rounded-2xl flex items-center justify-center text-3xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                        ⚡
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Validation &amp; Test</strong>
-                        <p class="text-xs text-secondary">Pre/Post-Silicon Verification, UVM, SystemVerilog, FPGA prototyping</p>
+                    <div>
+                        <h3 class="text-2xl font-heading font-bold text-primary">Semiconductors &amp; VLSI</h3>
+                        <span class="text-xs font-semibold text-secondary uppercase tracking-wider">Silicon Engineering &amp; Embedded Systems</span>
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Firmware &amp; Embedded</strong>
-                        <p class="text-xs text-secondary">Low-level C/C++, Device Drivers, RTOS, Boot loaders</p>
+                </div>
+
+                <p class="text-secondary text-sm leading-relaxed mb-6">
+                    Recruiting hard-to-find silicon engineering talent spanning RTL design, synthesis, physical design, and pre/post-silicon validation.
+                </p>
+
+                <div class="mb-6">
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-2.5">Key Technologies &amp; Ecosystems</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">ASIC / RTL Design</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Physical Design (PD)</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">SystemVerilog &amp; UVM</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">DFT &amp; ATPG</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Pre/Post Silicon Verification</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">FPGA Prototyping</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">STA &amp; Timing Signoff</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Firmware Low-level C/C++</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Device Drivers / RTOS</span>
                     </div>
+                </div>
+
+                <div class="border-t border-gray-100 pt-4">
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">High-Demand Roles Placed:</h4>
+                    <p class="text-xs text-primary font-medium leading-relaxed">
+                        Physical Design Lead • ASIC Design Verification Specialist • DFT Engineer • Embedded Firmware Architect • Silicon Validation Lead
+                    </p>
                 </div>
             </div>
 
-            <!-- Box 4: Automotive -->
-            <div class="border border-gray-200 rounded-2xl p-8 bg-gray-50 hover:shadow-xl hover:border-accent transition-all duration-300 group">
-                <div class="text-4xl mb-4">🚘</div>
-                <h3 class="font-bold text-xl mb-5 text-primary group-hover:text-accent transition-colors">Automotive &amp; AUTOSAR</h3>
-                <div class="space-y-3">
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">AUTOSAR Stack</strong>
-                        <p class="text-xs text-secondary">Classic &amp; Adaptive AUTOSAR, BSW, MCAL, RTE Architecture, Vector, EB Tresos</p>
+            <!-- 4. Automotive & AUTOSAR -->
+            <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md hover:shadow-2xl hover:border-accent transition-all duration-300 group">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-orange-50 text-accent rounded-2xl flex items-center justify-center text-3xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                        🚘
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Active Safety &amp; ADAS</strong>
-                        <p class="text-xs text-secondary">Functional Safety (ISO 26262), SOTIF, Camera/Radar/LiDAR fusion</p>
+                    <div>
+                        <h3 class="text-2xl font-heading font-bold text-primary">Automotive &amp; AUTOSAR</h3>
+                        <span class="text-xs font-semibold text-secondary uppercase tracking-wider">Software-Defined Vehicles &amp; ADAS</span>
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Model-Based Design</strong>
-                        <p class="text-xs text-secondary">MATLAB / Simulink, dSPACE, HIL/SIL testing, CANoe, CANdb++</p>
+                </div>
+
+                <p class="text-secondary text-sm leading-relaxed mb-6">
+                    Dedicated practice for Tier-1 automotive suppliers and OEMs building autonomous driving, functional safety, and AUTOSAR stacks.
+                </p>
+
+                <div class="mb-6">
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-2.5">Key Technologies &amp; Ecosystems</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Classic &amp; Adaptive AUTOSAR</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">BSW &amp; MCAL Integration</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">ISO 26262 (ASIL A-D)</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Active Safety / ADAS</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">MATLAB / Simulink</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">HIL / SIL Testing</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">CAN, LIN, FlexRay, Eth</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Vector CANoe &amp; DaVinci</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">EB Tresos</span>
                     </div>
+                </div>
+
+                <div class="border-t border-gray-100 pt-4">
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">High-Demand Roles Placed:</h4>
+                    <p class="text-xs text-primary font-medium leading-relaxed">
+                        AUTOSAR BSW Developer • Functional Safety Manager • ADAS Perception Algorithm Engineer • Model-Based Software Developer (Simulink)
+                    </p>
                 </div>
             </div>
 
-            <!-- Box 5: Full Stack -->
-            <div class="border border-gray-200 rounded-2xl p-8 bg-gray-50 hover:shadow-xl hover:border-accent transition-all duration-300 group">
-                <div class="text-4xl mb-4">💻</div>
-                <h3 class="font-bold text-xl mb-5 text-primary group-hover:text-accent transition-colors">Full-Stack &amp; Software Dev</h3>
-                <div class="space-y-3">
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Modern Frameworks</strong>
-                        <p class="text-xs text-secondary">React, Angular, Vue, Node.js, Python (Django/FastAPI), Java (Spring), Go, Rust</p>
+            <!-- 5. Full-Stack & Software Development -->
+            <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md hover:shadow-2xl hover:border-accent transition-all duration-300 group">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-orange-50 text-accent rounded-2xl flex items-center justify-center text-3xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                        💻
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Mobile Development</strong>
-                        <p class="text-xs text-secondary">iOS (Swift), Android (Kotlin), Flutter, React Native, Xamarin</p>
+                    <div>
+                        <h3 class="text-2xl font-heading font-bold text-primary">Full-Stack &amp; Software Dev</h3>
+                        <span class="text-xs font-semibold text-secondary uppercase tracking-wider">Cloud-Native Distributed Applications</span>
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Architecture &amp; Platform</strong>
-                        <p class="text-xs text-secondary">Microservices, Event-driven (Kafka), API Gateways, GraphQL, gRPC</p>
+                </div>
+
+                <p class="text-secondary text-sm leading-relaxed mb-6">
+                    Deploying engineering leads and staff engineers who design scalable web platforms, resilient microservices, and slick cross-platform mobile apps.
+                </p>
+
+                <div class="mb-6">
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-2.5">Key Technologies &amp; Ecosystems</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">React.js &amp; Next.js</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Node.js &amp; TypeScript</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Python (FastAPI, Django)</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Java Spring Boot</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Go / Golang</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Rust</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Microservices &amp; gRPC</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">GraphQL</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Flutter &amp; React Native</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Native iOS &amp; Android</span>
                     </div>
+                </div>
+
+                <div class="border-t border-gray-100 pt-4">
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">High-Demand Roles Placed:</h4>
+                    <p class="text-xs text-primary font-medium leading-relaxed">
+                        Principal Full-Stack Engineer • Staff Backend Architect (Go/Java) • Mobile Tech Lead (Flutter/React Native) • Frontend Engineering Manager
+                    </p>
                 </div>
             </div>
 
-            <!-- Box 6: QA -->
-            <div class="border border-gray-200 rounded-2xl p-8 bg-gray-50 hover:shadow-xl hover:border-accent transition-all duration-300 group">
-                <div class="text-4xl mb-4">🧪</div>
-                <h3 class="font-bold text-xl mb-5 text-primary group-hover:text-accent transition-colors">QA, Integration &amp; RPA</h3>
-                <div class="space-y-3">
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Quality Engineering</strong>
-                        <p class="text-xs text-secondary">Selenium, Appium, Cypress, TestNG, CI/CD (Jenkins, GitHub Actions)</p>
+            <!-- 6. QA, Integration & Intelligent RPA -->
+            <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md hover:shadow-2xl hover:border-accent transition-all duration-300 group">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-orange-50 text-accent rounded-2xl flex items-center justify-center text-3xl group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                        🧪
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Enterprise Integration</strong>
-                        <p class="text-xs text-secondary">MuleSoft, TIBCO, Apache Kafka, Dell Boomi, Azure Integration Services</p>
+                    <div>
+                        <h3 class="text-2xl font-heading font-bold text-primary">QA, Integration &amp; RPA</h3>
+                        <span class="text-xs font-semibold text-secondary uppercase tracking-wider">Quality Engineering &amp; Process Automation</span>
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <strong class="text-primary text-sm block mb-1">Intelligent RPA</strong>
-                        <p class="text-xs text-secondary">UiPath, Automation Anywhere, Blue Prism, Power Automate</p>
+                </div>
+
+                <p class="text-secondary text-sm leading-relaxed mb-6">
+                    Providing SDETs, API integration specialists, and robotic automation experts to safeguard software quality and eliminate manual workflows.
+                </p>
+
+                <div class="mb-6">
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-2.5">Key Technologies &amp; Ecosystems</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Selenium &amp; Cypress</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">Appium &amp; Playwright</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">MuleSoft Anypoint</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-orange-50 text-accent border border-orange-100">UiPath &amp; Automation Anywhere</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">TIBCO</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Apache Kafka</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Dell Boomi</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">Performance Testing (JMeter)</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-100 text-primary">CI/CD Pipeline Automation</span>
                     </div>
+                </div>
+
+                <div class="border-t border-gray-100 pt-4">
+                    <h4 class="text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">High-Demand Roles Placed:</h4>
+                    <p class="text-xs text-primary font-medium leading-relaxed">
+                        Lead SDET • MuleSoft Integration Architect • RPA Program Lead (UiPath) • API Gateway Specialist • Performance Test Lead
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
-<section class="py-16 bg-primary text-white text-center">
-    <div class="container mx-auto px-6 max-w-2xl">
-        <h2 class="text-3xl font-heading font-bold mb-4">Need a Specialist in Your Stack?</h2>
-        <p class="text-gray-300 mb-8">Our domain recruiters have deep networks in every tech vertical. Let's discuss your specific requirements.</p>
-        <a href="/services/" class="bg-accent text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition shadow-lg inline-block mr-4 transform hover:-translate-y-1">View Services</a>
-        <a href="/#contact" class="border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-primary transition inline-block transform hover:-translate-y-1">Contact Us</a>
+<!-- Technical Screening Protocol -->
+<section class="py-20 bg-white border-y border-gray-200">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16 max-w-2xl mx-auto">
+            <h4 class="text-accent font-bold uppercase tracking-wider text-sm mb-2">Vetting Process</h4>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary">How We Screen Technical Talent</h2>
+            <p class="text-secondary mt-3">We ensure candidates are evaluated by recruiters and advisory engineers who understand your domain.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center hover:shadow-lg transition">
+                <div class="w-16 h-16 bg-primary text-accent rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md">
+                    01
+                </div>
+                <h3 class="text-xl font-heading font-bold text-primary mb-3">Architectural Aptitude</h3>
+                <p class="text-secondary text-sm leading-relaxed">
+                    Assessment of system design principles, concurrency, scalability, and code cleanliness — ensuring engineers write maintainable production software.
+                </p>
+            </div>
+
+            <div class="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center hover:shadow-lg transition">
+                <div class="w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md">
+                    02
+                </div>
+                <h3 class="text-xl font-heading font-bold text-primary mb-3">Hands-On Framework Depth</h3>
+                <p class="text-secondary text-sm leading-relaxed">
+                    Verification of real-world problem-solving in specific framework versions, APIs, and low-level protocols rather than theoretical trivia.
+                </p>
+            </div>
+
+            <div class="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center hover:shadow-lg transition">
+                <div class="w-16 h-16 bg-primary text-accent rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-md">
+                    03
+                </div>
+                <h3 class="text-xl font-heading font-bold text-primary mb-3">Culture &amp; Ownership</h3>
+                <p class="text-secondary text-sm leading-relaxed">
+                    Evaluation of communication clarity, proactive collaboration, and accountability to ensure minimal first-year team friction and zero churn.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-20 bg-primary text-white relative overflow-hidden">
+    <div class="container mx-auto px-6 text-center max-w-3xl relative z-10">
+        <h2 class="text-3xl md:text-5xl font-heading font-extrabold mb-5">
+            Need Talent in a <span class="text-accent">Specialized Tech Stack?</span>
+        </h2>
+        <p class="text-gray-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+            Challenge us with your hardest-to-fill technical requisitions. Our domain recruiters will deliver a calibrated shortlist within 24 hours.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="/#contact" class="bg-accent text-white px-8 py-4 rounded-full font-bold text-base hover:bg-orange-600 transition shadow-lg inline-block transform hover:-translate-y-1">
+                Discuss Your Requirements
+            </a>
+            <a href="/services/" class="border-2 border-white/20 hover:border-white text-white px-8 py-4 rounded-full font-bold text-base hover:bg-white/10 transition inline-block">
+                View Engagement Models →
+            </a>
+        </div>
     </div>
 </section>
 
