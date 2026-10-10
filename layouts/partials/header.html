@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-24">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Gigworx | Specialized IT Staffing & Executive Search Solutions</title>
+    <meta name="title" content="Gigworx | Specialized IT Staffing & Executive Search Solutions">
+    <meta name="description" content="Gigworx is India's premier IT staffing and executive search firm. We provide permanent IT recruitment, agile workforce acceleration, and RPO outsourcing for high-growth enterprises across Cloud, AI, ERP, and VLSI domains.">
+    <meta name="keywords" content="IT Staffing Agency India, Executive Search Technology Leaders, Permanent IT Recruitment, Contract IT Staffing Solutions, RPO Outsourcing Bengaluru, Tech Recruitment Agency, AI & Cloud Staffing, VLSI Semiconductor Recruitment, Enterprise ERP Staffing, Agile Workforce">
+    <meta name="author" content="Gigworx Tech Services Pvt. Ltd.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Open Graph / LinkedIn / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gigworx.in/">
+    <meta property="og:title" content="Gigworx | Specialized IT Staffing & Executive Search">
+    <meta property="og:description" content="Accelerate enterprise growth with top-tier tech talent. Specialized in IT engineering, executive leadership search, and agile workforce solutions.">
+    <meta property="og:image" content="https://www.gigworx.in/images/gigworx_logo.svg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.gigworx.in/">
+    <meta property="twitter:title" content="Gigworx | Inspire with Intelligence">
+    <meta property="twitter:description" content="India's leading IT staffing and executive search firm for high-growth tech enterprises.">
+    
+    <link rel="canonical" href="https://www.gigworx.in/">
+    <link rel="icon" href="/images/gigworx_favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20262E',
+                        accent: '#FF6B00',
+                        secondary: '#64748B',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+        
+        /* Custom Loader Animation */
+        @keyframes jumpDot {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+        .jumping-dot {
+            animation: jumpDot 0.8s infinite ease-in-out;
+            transform-origin: center;
+        }
+        .client-logo-fallback { display: none; }
+    </style>
+</head>
+<body class="bg-light text-primary antialiased">
+    <!-- Loader -->
+    <div id="loader" class="fixed inset-0 bg-white z-[9999] flex flex-col items-center justify-center transition-opacity duration-700">
+        <svg width="120" height="120" viewBox="500 10 120 140">
+            <!-- Forward stroke of X -->
+            <path d="M 525 55 L 605 130" fill="none" stroke="#20262E" stroke-width="18" stroke-linecap="round"/>
+            <!-- Arch connecting into the back stroke of X -->
+            <path d="M 535 130 C 560 85, 570 70, 605 55" fill="none" stroke="#20262E" stroke-width="18" stroke-linecap="round"/>
+            <!-- Talent Apex Head (Orange Circle) -->
+            <circle cx="568" cy="30" r="15" fill="#FF6B00" class="jumping-dot"/>
+        </svg>
+        <p class="mt-4 text-primary font-heading font-bold tracking-widest uppercase text-sm animate-pulse">Loading...</p>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-6 flex justify-between items-center relative z-50">
+            <a href="/" class="flex items-center">
+                <img src="/images/gigworx_logo.svg" alt="Gigworx Logo" class="h-16 md:h-20">
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex space-x-8 text-sm font-semibold text-secondary">
+                <a href="/about/" class="nav-link hover:text-accent transition">About</a>
+                <a href="/services/" class="nav-link hover:text-accent transition">Services</a>
+                <a href="/expertise/" class="nav-link hover:text-accent transition">Expertise</a>
+                <a href="/why-us/" class="nav-link hover:text-accent transition">Why Us</a>
+                <a href="/#contact" class="nav-link hover:text-accent transition">Contact</a>
+            </div>
+            
+            <a href="/#contact" class="hidden lg:inline-block bg-accent text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition shadow-md">Partner With Us</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-primary focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 lg:hidden flex-col py-6 px-6 space-y-6 text-center text-lg text-secondary font-semibold z-40">
+            <a href="/about/" class="nav-link block hover:text-accent transition">About</a>
+            <a href="/services/" class="nav-link block hover:text-accent transition">Services</a>
+            <a href="/expertise/" class="nav-link block hover:text-accent transition">Expertise</a>
+            <a href="/why-us/" class="nav-link block hover:text-accent transition">Why Us</a>
+            <a href="/#contact" class="nav-link block hover:text-accent transition">Contact</a>
+            <a href="/#contact" class="inline-block bg-accent text-white px-8 py-3 mx-auto rounded-full font-semibold hover:bg-orange-600 transition shadow-md w-full max-w-xs">Partner With Us</a>
+        </div>
+    </nav>
