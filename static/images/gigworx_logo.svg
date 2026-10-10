@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 250" width="100%" height="100%">
+  <defs>
+    <style>
+      .wordmark { font-family: 'Montserrat', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 800; font-size: 88px; fill: #20262E; letter-spacing: 3px; }
+      .subtext { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 800; font-size: 38px; fill: #20262E; letter-spacing: 11px; }
+      .accent { fill: #FF6B00; }
+    </style>
+  </defs>
+
+  <!-- Transparent Background -->
+  
+  <!-- "GIG" Wordmark -->
+  <text x="30" y="130" class="wordmark">GIG</text>
+
+  <!-- Custom Linked "W" and "X" with Person dot -->
+  <!-- W shape -->
+  <path d="M 235 55 L 260 130 L 285 75 L 310 130 L 335 55" fill="none" stroke="#20262E" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- "O" Letter -->
+  <text x="365" y="130" class="wordmark">O</text>
+
+  <!-- "R" Letter -->
+  <text x="445" y="130" class="wordmark">R</text>
+
+  <!-- Arching Bridge & "X" Talent Motif -->
+  <!-- Forward stroke of X -->
+  <path d="M 525 55 L 605 130" fill="none" stroke="#20262E" stroke-width="18" stroke-linecap="round"/>
+  <!-- Arch connecting into the back stroke of X -->
+  <path d="M 535 130 C 560 85, 570 70, 605 55" fill="none" stroke="#20262E" stroke-width="18" stroke-linecap="round"/>
+  
+  <!-- Talent Apex Head (Orange Circle) -->
+  <circle cx="568" cy="30" r="15" class="accent"/>
+
+  <!-- Subtitle: STAFFING SOLUTIONS -->
+  <text x="35" y="195" class="subtext">STAFFING SOLUTIONS</text>
+</svg>

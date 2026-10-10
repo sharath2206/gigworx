@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60">
+    <rect x="5" y="10" width="40" height="40" rx="4" fill="#1C3F60"/>
+    <text x="25" y="38" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="#FFF" text-anchor="middle">FS</text>
+    <text x="55" y="38" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#333">FAST SWITCH</text>
+</svg>
+

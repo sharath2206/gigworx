@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <style>
+    .glyph { stroke: #20262E; }
+    @media (prefers-color-scheme: dark) {
+      .glyph { stroke: #F8FAFC; } /* Very light gray/white for dark mode */
+    }
+  </style>
+
+  <!-- Talent Head Marker -->
+  <circle cx="178" cy="55" r="26" fill="#FF6B00" />
+
+  <!-- Bold Interlocking WX Glyph -->
+  <path d="M 28 85 L 56 195 L 88 115 L 120 195 L 138 120" 
+        fill="none" class="glyph" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M 132 195 L 228 85" 
+        fill="none" class="glyph" stroke-width="26" stroke-linecap="round"/>
+  
+  <path d="M 125 130 Q 155 85 185 85 L 228 195" 
+        fill="none" class="glyph" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

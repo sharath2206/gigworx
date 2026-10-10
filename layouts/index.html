@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-24">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }} | Inspire with Intelligence</title>
+    <link rel="icon" href="/images/gigworx_favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#20262E',
+                        accent: '#FF6B00',
+                        secondary: '#64748B',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+        
+        /* Custom Loader Animation */
+        @keyframes jumpDot {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+        .jumping-dot {
+            animation: jumpDot 0.8s infinite ease-in-out;
+            transform-origin: center;
+        }
+        .client-logo-fallback { display: none; }
+    </style>
+</head>
+<body class="bg-light text-primary antialiased">
+    <!-- Loader -->
+    <div id="loader" class="fixed inset-0 bg-white z-[9999] flex flex-col items-center justify-center transition-opacity duration-700">
+        <svg width="120" height="120" viewBox="500 10 120 140">
+            <!-- Forward stroke of X -->
+            <path d="M 525 55 L 605 130" fill="none" stroke="#20262E" stroke-width="18" stroke-linecap="round"/>
+            <!-- Arch connecting into the back stroke of X -->
+            <path d="M 535 130 C 560 85, 570 70, 605 55" fill="none" stroke="#20262E" stroke-width="18" stroke-linecap="round"/>
+            <!-- Talent Apex Head (Orange Circle) -->
+            <circle cx="568" cy="30" r="15" fill="#FF6B00" class="jumping-dot"/>
+        </svg>
+        <p class="mt-4 text-primary font-heading font-bold tracking-widest uppercase text-sm animate-pulse">Loading...</p>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-6 flex justify-between items-center relative z-50">
+            <a href="/" class="flex items-center">
+                <img src="/images/gigworx_logo.svg" alt="Gigworx Logo" class="h-16 md:h-20">
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex space-x-8 text-sm font-semibold text-secondary">
+                <a href="#about" class="nav-link hover:text-accent transition">About</a>
+                <a href="#services" class="nav-link hover:text-accent transition">Services</a>
+                <a href="#expertise" class="nav-link hover:text-accent transition">Expertise</a>
+                <a href="#why-us" class="nav-link hover:text-accent transition">Why Us</a>
+                <a href="#contact" class="nav-link hover:text-accent transition">Contact</a>
+            </div>
+            
+            <a href="#contact" class="hidden lg:inline-block bg-accent text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition shadow-md">Partner With Us</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-primary focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 lg:hidden flex-col py-6 px-6 space-y-6 text-center text-lg text-secondary font-semibold z-40">
+            <a href="#about" class="nav-link block hover:text-accent transition">About</a>
+            <a href="#services" class="nav-link block hover:text-accent transition">Services</a>
+            <a href="#expertise" class="nav-link block hover:text-accent transition">Expertise</a>
+            <a href="#why-us" class="nav-link block hover:text-accent transition">Why Us</a>
+            <a href="#contact" class="nav-link block hover:text-accent transition">Contact</a>
+            <a href="#contact" class="inline-block bg-accent text-white px-8 py-3 mx-auto rounded-full font-semibold hover:bg-orange-600 transition shadow-md w-full max-w-xs">Partner With Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-28 relative overflow-hidden">
+        <!-- Abstract Background Decoration -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
+                <polygon fill="#FF6B00" points="0,100 100,0 100,100"/>
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-6 text-center max-w-4xl relative z-10">
+            <h4 class="text-accent tracking-widest font-bold uppercase mb-4 text-sm bg-primary bg-opacity-50 inline-block px-4 py-1 rounded-full border border-gray-700">Strategic Capability Deck</h4>
+            <h1 class="text-5xl md:text-7xl font-heading font-extrabold mb-8 leading-tight">Inspire with <span class="text-accent">Intelligence</span></h1>
+            
+            <!-- Clearer subtitle -->
+            <p class="text-2xl md:text-3xl font-medium text-gray-200 mb-10 leading-relaxed shadow-sm">
+                Specialized IT engineering, leadership executive search, and agile workforce acceleration for high-growth enterprises.
+            </p>
+            
+            <a href="#services" class="bg-accent text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition shadow-lg inline-block transform hover:-translate-y-1">Explore Our Solutions</a>
+        </div>
+    </section>
+
+    <!-- Vision & Mission (New Data) -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h4 class="text-accent font-bold uppercase tracking-wide">Strategic Pillars</h4>
+                <h2 class="text-4xl font-heading font-bold mt-2 text-primary">Vision, Mission & Shared Values</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="border-l-4 border-primary bg-gray-50 p-10 rounded-r-2xl shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Our Vision</h3>
+                    <p class="text-secondary text-lg leading-relaxed">To be India's most dependable staffing partner, setting industry benchmarks for recruitment velocity, quality, and business value.</p>
+                </div>
+                <div class="border-l-4 border-accent bg-orange-50 p-10 rounded-r-2xl shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Our Mission</h3>
+                    <p class="text-secondary text-lg leading-relaxed">Combine technical depth, agility, and search precision to lower client hiring friction, control costs, and power revenue expansion.</p>
+                </div>
+            </div>
+
+            <!-- Core Values -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="text-center p-6 border border-gray-100 rounded-xl bg-white shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-primary mb-2">Integrity</h4>
+                    <p class="text-xs text-secondary">Absolute ethics.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-100 rounded-xl bg-white shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-primary mb-2">Efficiency</h4>
+                    <p class="text-xs text-secondary">Rapid cycles.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-100 rounded-xl bg-white shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-primary mb-2">Quality</h4>
+                    <p class="text-xs text-secondary">Vetted profiles.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-100 rounded-xl bg-white shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-primary mb-2">Trust</h4>
+                    <p class="text-xs text-secondary">Long-term focus.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-100 rounded-xl bg-white shadow-sm hover:shadow-md transition">
+                    <h4 class="font-bold text-primary mb-2">Ownership</h4>
+                    <p class="text-xs text-secondary">Accountable delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h4 class="text-accent font-bold uppercase tracking-wide">Service Portfolio</h4>
+                <h2 class="text-4xl font-heading font-bold mt-2 text-primary">Flexible Engagement Models</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-gray-200 hover:border-primary transition transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center mb-6 text-3xl">👥</div>
+                    <h3 class="text-2xl font-bold mb-3 text-primary">Permanent Staffing</h3>
+                    <p class="text-secondary mb-6 h-20 text-sm">Comprehensive vetting and placement of full-time technical and functional specialists across domains.</p>
+                    <div class="border-t border-gray-100 pt-4">
+                        <strong class="block text-primary text-sm mb-1">Calibrated Pipeline</strong>
+                        <span class="text-xs text-secondary">Fastest turnaround time in market.</span>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-accent hover:border-orange-600 transition transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-6 text-3xl">👑</div>
+                    <h3 class="text-2xl font-bold mb-3 text-primary">Executive Search</h3>
+                    <p class="text-secondary mb-6 h-20 text-sm">Targeted leadership recruitment for CEOs, CTOs, CFOs, VPs, and Country Heads who shape enterprise growth.</p>
+                    <div class="border-t border-gray-100 pt-4">
+                        <strong class="block text-accent text-sm mb-1">Discreet & Rigorous</strong>
+                        <span class="text-xs text-secondary">High leadership retention rate.</span>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-gray-200 hover:border-primary transition transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center mb-6 text-3xl">🏢</div>
+                    <h3 class="text-2xl font-bold mb-3 text-primary">RPO Outsourcing</h3>
+                    <p class="text-secondary mb-6 h-20 text-sm">Turnkey recruitment outsourcing driving predictable hiring volume, cost efficiency, and candidate experience.</p>
+                    <div class="border-t border-gray-100 pt-4">
+                        <strong class="block text-primary text-sm mb-1">Elastic Hiring Capacity</strong>
+                        <span class="text-xs text-secondary">Enterprise SLA compliance.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Expertise (New Data) -->
+    <section id="expertise" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h4 class="text-accent font-bold uppercase tracking-wide">Technical Capabilities</h4>
+                <h2 class="text-4xl font-heading font-bold mt-2 text-primary">Technology Expertise in Detail</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Box 1 -->
+                <div class="border border-gray-200 rounded-xl p-6 bg-gray-50 hover:shadow-lg transition">
+                    <h3 class="font-bold text-lg mb-4 flex items-center"><span class="mr-2">☁️</span> Enterprise, ERP & Cloud</h3>
+                    <p class="text-sm text-secondary mb-2"><strong>ERP & CRM:</strong> Oracle, SAP, Microsoft Dynamics, Salesforce.</p>
+                    <p class="text-sm text-secondary mb-2"><strong>Cloud & Infra:</strong> AWS, Azure, SaaS, PaaS, IaaS.</p>
+                    <p class="text-sm text-secondary"><strong>ITSM & CMS:</strong> ServiceNow, Adobe AEM, Magento.</p>
+                </div>
+                <!-- Box 2 -->
+                <div class="border border-gray-200 rounded-xl p-6 bg-gray-50 hover:shadow-lg transition">
+                    <h3 class="font-bold text-lg mb-4 flex items-center"><span class="mr-2">📊</span> Data, AI & Analytics</h3>
+                    <p class="text-sm text-secondary mb-2"><strong>AI & Emerging:</strong> Machine Learning, GenAI, MLOps, Blockchain.</p>
+                    <p class="text-sm text-secondary mb-2"><strong>Business Intelligence:</strong> Tableau, Power BI.</p>
+                    <p class="text-sm text-secondary"><strong>Big Data:</strong> Hadoop, Spark, Informatica, Snowflake.</p>
+                </div>
+                <!-- Box 3 -->
+                <div class="border border-gray-200 rounded-xl p-6 bg-gray-50 hover:shadow-lg transition">
+                    <h3 class="font-bold text-lg mb-4 flex items-center"><span class="mr-2">⚡</span> Semiconductors & VLSI</h3>
+                    <p class="text-sm text-secondary mb-2"><strong>Silicon Engineering:</strong> ASIC / RTL Design, Physical Design.</p>
+                    <p class="text-sm text-secondary mb-2"><strong>Validation & Test:</strong> Pre/Post-Silicon Verification, FPGA.</p>
+                    <p class="text-sm text-secondary"><strong>Firmware & Embedded:</strong> Low-level C/C++, Device Drivers.</p>
+                </div>
+                <!-- Box 4 -->
+                <div class="border border-gray-200 rounded-xl p-6 bg-gray-50 hover:shadow-lg transition">
+                    <h3 class="font-bold text-lg mb-4 flex items-center"><span class="mr-2">🚘</span> Automotive & AUTOSAR</h3>
+                    <p class="text-sm text-secondary mb-2"><strong>AUTOSAR Stack:</strong> BSW, MCAL, RTE Architecture.</p>
+                    <p class="text-sm text-secondary mb-2"><strong>Active Safety & ADAS:</strong> Functional Safety (ISO 26262).</p>
+                    <p class="text-sm text-secondary"><strong>Model-Based Design:</strong> MATLAB / Simulink, HIL testing.</p>
+                </div>
+                <!-- Box 5 -->
+                <div class="border border-gray-200 rounded-xl p-6 bg-gray-50 hover:shadow-lg transition">
+                    <h3 class="font-bold text-lg mb-4 flex items-center"><span class="mr-2">💻</span> Full-Stack & Software Dev</h3>
+                    <p class="text-sm text-secondary mb-2"><strong>Modern Frameworks:</strong> React, Angular, Node.js, Python, Java, Go.</p>
+                    <p class="text-sm text-secondary mb-2"><strong>Mobile:</strong> iOS, Android, Flutter, React Native.</p>
+                    <p class="text-sm text-secondary"><strong>Architecture:</strong> Microservices, Event-driven Kafka, API Gateways.</p>
+                </div>
+                <!-- Box 6 -->
+                <div class="border border-gray-200 rounded-xl p-6 bg-gray-50 hover:shadow-lg transition">
+                    <h3 class="font-bold text-lg mb-4 flex items-center"><span class="mr-2">🧪</span> QA, Integration & RPA</h3>
+                    <p class="text-sm text-secondary mb-2"><strong>Quality Engineering:</strong> Selenium, Appium, CI/CD pipelines.</p>
+                    <p class="text-sm text-secondary mb-2"><strong>Enterprise Integration:</strong> MuleSoft, TIBCO, Apache Kafka.</p>
+                    <p class="text-sm text-secondary"><strong>Intelligent RPA:</strong> UiPath, Automation Anywhere, Blue Prism.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h4 class="text-accent font-bold uppercase tracking-wide">Competitive Advantage</h4>
+                <h2 class="text-4xl font-heading font-bold mt-2">Why Enterprises Choose Gigworx</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-5 p-8 rounded-2xl border border-gray-700 backdrop-blur-sm">
+                    <h3 class="text-5xl font-heading font-bold text-accent mb-4">12-24h</h3>
+                    <h4 class="text-xl font-bold mb-3">Rapid Turnaround SLA</h4>
+                    <p class="text-gray-300 mb-6">Calibrated profiles submitted within 12-24 hours of requisition kick-off.</p>
+                    <p class="text-sm font-semibold text-accent">Velocity that beats competitors.</p>
+                </div>
+                <div class="bg-white bg-opacity-5 p-8 rounded-2xl border border-gray-700 backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-4 text-xl">🎯</div>
+                    <h4 class="text-xl font-bold mb-3">Domain-Specific Recruiters</h4>
+                    <p class="text-gray-300 mb-6">Technical recruiters continually trained in specialized frameworks speak your engineering language.</p>
+                    <p class="text-sm font-semibold text-accent">Zero false positives.</p>
+                </div>
+                <div class="bg-white bg-opacity-5 p-8 rounded-2xl border border-gray-700 backdrop-blur-sm">
+                    <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-4 text-xl">🤝</div>
+                    <h4 class="text-xl font-bold mb-3">Cultural & Tech Fit</h4>
+                    <p class="text-gray-300 mb-6">Dual-stage qualification assessing both architectural aptitude and organizational values.</p>
+                    <p class="text-sm font-semibold text-accent">Minimized first-year churn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Benefits -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h4 class="text-accent font-bold uppercase tracking-wide">Value Delivery</h4>
+                <h2 class="text-4xl font-heading font-bold mt-2 text-primary">Client Benefits & Business Impact</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-accent text-center">
+                    <h3 class="text-5xl font-heading font-bold text-primary mb-4">-45%</h3>
+                    <h4 class="font-bold mb-2">Reduced Time-to-Hire</h4>
+                    <p class="text-xs text-secondary">Accelerated deployment for mission-critical roles.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-primary text-center">
+                    <h3 class="text-5xl font-heading font-bold text-primary mb-4">100%</h3>
+                    <h4 class="font-bold mb-2">Compliance & Governance</h4>
+                    <p class="text-xs text-secondary">Comprehensive background and statutory risk mitigation.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-primary text-center">
+                    <h3 class="text-5xl font-heading font-bold text-primary mb-4">3x</h3>
+                    <h4 class="font-bold mb-2">Elastic Sourcing</h4>
+                    <p class="text-xs text-secondary">Instant ramp-up during aggressive hiring and project surges.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-accent text-center">
+                    <h3 class="text-5xl font-heading font-bold text-primary mb-4">>90%</h3>
+                    <h4 class="font-bold mb-2">Offer-to-Join Ratio</h4>
+                    <p class="text-xs text-secondary">Continuous engagement minimizing drop-offs and reneges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients List with Better View (Logo Placeholder with Fallback) -->
+    <section class="py-24 bg-white border-y border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h4 class="text-accent font-bold uppercase tracking-wide mb-2">Client References</h4>
+                <h2 class="text-4xl font-heading font-bold text-primary">Few of Our Valued Clients</h2>
+                <p class="text-secondary mt-4 max-w-2xl mx-auto">Empowering leading technology enterprises, specialized staffing networks, and high-growth innovators.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-80">
+                <!-- Client 1 -->
+                <div class="w-full flex justify-center items-center h-32 transition duration-300 hover:scale-105">
+                    <img src="/images/clients/netskope.png" alt="Netskope" class="max-h-28 w-full object-contain scale-125">
+                </div>
+                <!-- Client 2 -->
+                <div class="w-full flex justify-center items-center h-32 transition duration-300 hover:scale-105">
+                    <img src="/images/clients/99games.png" alt="99 Games" class="max-h-28 w-full object-contain scale-125">
+                </div>
+                <!-- Client 3 -->
+                <div class="w-full flex justify-center items-center h-32 transition duration-300 hover:scale-105">
+                    <img src="/images/clients/fastswitch.png" alt="Fast Switch" class="max-h-28 w-full object-contain scale-125">
+                </div>
+                <!-- Client 4 -->
+                <div class="w-full flex justify-center items-center h-32 transition duration-300 hover:scale-105">
+                    <img src="/images/clients/immunify.png" alt="immunify.me" class="max-h-28 w-full object-contain scale-125">
+                </div>
+                <!-- Client 5 -->
+                <div class="w-full flex justify-center items-center h-32 transition duration-300 hover:scale-105">
+                    <img src="/images/clients/unilog.png" alt="unilog" class="max-h-28 w-full object-contain scale-125">
+                </div>
+                <!-- Client 6 -->
+                <div class="w-full flex justify-center items-center h-32 transition duration-300 hover:scale-105">
+                    <img src="/images/clients/evsys.png" alt="Evsys" class="max-h-28 w-full object-contain scale-125">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-primary text-white min-h-[calc(100vh-6rem)] flex flex-col justify-between pt-16 pb-8 text-center">
+        <div class="container mx-auto px-6 max-w-4xl flex-grow flex flex-col justify-center">
+            <img src="/images/gigworx_logo.svg" alt="Gigworx" class="h-20 mx-auto mb-12 filter brightness-0 invert opacity-100">
+            
+            <div class="bg-white bg-opacity-5 p-10 rounded-2xl border border-gray-700 mb-12 backdrop-blur-sm shadow-xl">
+                <h2 class="text-3xl md:text-4xl font-heading mb-6 font-semibold leading-relaxed">"People are not your most important asset.<br> <span class="text-accent">The right people are.</span>"</h2>
+                <p class="text-gray-400 italic text-lg">— Jim Collins, Good to Great</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 text-base font-semibold">
+                <a href="https://www.gigworx.in" class="hover:text-accent flex items-center transition bg-white bg-opacity-10 px-6 py-3 rounded-full hover:bg-opacity-20"><span class="mr-3 text-xl">🌐</span> www.gigworx.in</a>
+                <a href="mailto:contact@gigworx.in" class="hover:text-accent flex items-center transition bg-white bg-opacity-10 px-6 py-3 rounded-full hover:bg-opacity-20"><span class="mr-3 text-xl">✉️</span> contact@gigworx.in</a>
+                <span class="flex items-center bg-white bg-opacity-10 px-6 py-3 rounded-full"><span class="mr-3 text-xl">📍</span> Bengaluru HQ &bull; Pan-India</span>
+            </div>
+        </div>
+        <div class="mt-12 text-gray-500 text-sm border-t border-gray-800 pt-8 w-full">
+            &copy; 2026 Gigworx Tech Services Pvt. Ltd. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Script for Loader and Navbar Highlighting -->
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loader = document.getElementById('loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.remove(), 700);
+                }
+            }, 800);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const iconPath = document.getElementById('menu-icon-path');
+            const mobileLinks = menu.querySelectorAll('a');
+
+            function toggleMenu() {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('flex');
+                if (menu.classList.contains('hidden')) {
+                    iconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Hamburger
+                } else {
+                    iconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // X Close
+                }
+            }
+
+            btn.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!menu.classList.contains('hidden')) toggleMenu();
+                });
+            });
+
+            // Navbar active state highlighting
+            const sections = document.querySelectorAll('section[id], footer[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= (sectionTop - 250)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(a => {
+                    a.classList.remove('text-accent');
+                    if (a.getAttribute('href') === `#${current}`) {
+                        a.classList.add('text-accent');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

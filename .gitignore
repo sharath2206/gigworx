@@ -1,0 +1,10 @@
+/public/
+/resources/_gen/
+.hugo_build.lock
+.DS_Store
+Gigworx Corporate Presentation.pdf
+Gigworx Corporate Presentation.pptx
+Gigworx-Favicon.png
+GigworxLogo.png
+GigworxLogo_edited.png
+crop.py

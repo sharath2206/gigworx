@@ -1,0 +1,4 @@
+baseURL = 'https://www.gigworx.in/'
+languageCode = 'en-us'
+title = 'Gigworx Staffing Solution'
+theme = 'gigworx-theme'

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+    <text x="10" y="40" font-family="Arial, sans-serif" font-weight="bold" font-size="32" fill="#333">Ev</text>
+    <circle cx="53" cy="28" r="4" fill="#FF6B00"/>
+    <text x="60" y="40" font-family="Arial, sans-serif" font-weight="bold" font-size="32" fill="#333">sys</text>
+</svg>
+
