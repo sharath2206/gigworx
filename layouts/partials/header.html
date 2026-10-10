@@ -91,6 +91,7 @@
                 <a href="/services/" class="nav-link transition pb-1 border-b-2 {{ if eq .RelPermalink "/services/" }}text-accent font-bold border-accent{{ else }}text-secondary hover:text-accent border-transparent{{ end }}">Services</a>
                 <a href="/expertise/" class="nav-link transition pb-1 border-b-2 {{ if eq .RelPermalink "/expertise/" }}text-accent font-bold border-accent{{ else }}text-secondary hover:text-accent border-transparent{{ end }}">Expertise</a>
                 <a href="/why-us/" class="nav-link transition pb-1 border-b-2 {{ if eq .RelPermalink "/why-us/" }}text-accent font-bold border-accent{{ else }}text-secondary hover:text-accent border-transparent{{ end }}">Why Us</a>
+                <a href="/blog/" class="nav-link transition pb-1 border-b-2 {{ if or (eq .RelPermalink "/blog/") (hasPrefix .RelPermalink "/blog/") }}text-accent font-bold border-accent{{ else }}text-secondary hover:text-accent border-transparent{{ end }}">Blog</a>
                 <a href="/#contact" class="nav-link text-secondary hover:text-accent transition pb-1 border-b-2 border-transparent">Contact</a>
             </div>
             
@@ -111,6 +112,7 @@
             <a href="/services/" class="nav-link block py-2.5 px-4 rounded-xl transition {{ if eq .RelPermalink "/services/" }}text-accent font-bold bg-orange-50{{ else }}hover:text-accent hover:bg-gray-50{{ end }}">Services</a>
             <a href="/expertise/" class="nav-link block py-2.5 px-4 rounded-xl transition {{ if eq .RelPermalink "/expertise/" }}text-accent font-bold bg-orange-50{{ else }}hover:text-accent hover:bg-gray-50{{ end }}">Expertise</a>
             <a href="/why-us/" class="nav-link block py-2.5 px-4 rounded-xl transition {{ if eq .RelPermalink "/why-us/" }}text-accent font-bold bg-orange-50{{ else }}hover:text-accent hover:bg-gray-50{{ end }}">Why Us</a>
+            <a href="/blog/" class="nav-link block py-2.5 px-4 rounded-xl transition {{ if or (eq .RelPermalink "/blog/") (hasPrefix .RelPermalink "/blog/") }}text-accent font-bold bg-orange-50{{ else }}hover:text-accent hover:bg-gray-50{{ end }}">Blog</a>
             <a href="/#contact" class="nav-link block py-2.5 px-4 rounded-xl hover:text-accent hover:bg-gray-50 transition">Contact</a>
             <a href="/#contact" class="inline-block bg-accent text-white px-8 py-3 mx-auto rounded-full font-semibold hover:bg-orange-600 transition shadow-md w-full max-w-xs mt-2">Partner With Us</a>
         </div>

@@ -1,0 +1,162 @@
+{{ partial "header.html" . }}
+
+<!-- Page Hero -->
+<section class="bg-primary text-white py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-15 pointer-events-none">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
+            <polygon fill="#FF6B00" points="0,100 100,0 100,100"/>
+        </svg>
+    </div>
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-accent opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="container mx-auto px-6 text-center max-w-4xl relative z-10">
+        <div class="inline-flex items-center gap-2 bg-white bg-opacity-10 border border-gray-700 px-4 py-1.5 rounded-full mb-6 text-xs uppercase tracking-widest text-accent font-bold">
+            <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+            Thought Leadership &amp; Hiring Playbooks
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold mb-6 leading-tight">
+            Insights &amp; <span class="text-accent">Perspectives</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            Market intelligence, engineering talent benchmarks, and recruitment playbooks designed for high-growth tech enterprises.
+        </p>
+    </div>
+</section>
+
+<!-- Blog Listing Content -->
+<section class="py-20 bg-light min-h-[60vh]">
+    <div class="container mx-auto px-6 max-w-7xl">
+
+        {{ $regularPages := .RegularPages }}
+        {{ if gt (len $regularPages) 0 }}
+
+            <!-- Featured Article (First Post) -->
+            {{ with index $regularPages 0 }}
+            <div class="mb-16">
+                <a href="{{ .RelPermalink }}" class="block group">
+                    <div class="bg-white rounded-3xl p-8 md:p-12 border border-gray-200 shadow-md group-hover:shadow-2xl group-hover:border-accent transition-all duration-300 grid lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7">
+                            <div class="flex flex-wrap items-center gap-3 mb-4">
+                                <span class="px-3 py-1 bg-orange-100 text-accent text-xs font-bold uppercase tracking-wider rounded-full">
+                                    {{ with .Params.category }}{{ . }}{{ else }}Featured Insight{{ end }}
+                                </span>
+                                <span class="text-xs text-secondary font-medium">
+                                    {{ .Date.Format "Jan 2, 2006" }}
+                                </span>
+                                <span class="text-xs text-secondary font-medium">•</span>
+                                <span class="text-xs text-secondary font-medium">
+                                    {{ .ReadingTime }} min read
+                                </span>
+                            </div>
+
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-primary group-hover:text-accent transition-colors duration-300 mb-4 leading-snug">
+                                {{ .Title }}
+                            </h2>
+
+                            <p class="text-secondary text-base leading-relaxed mb-6">
+                                {{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 180 }}{{ end }}
+                            </p>
+
+                            <div class="inline-flex items-center gap-2 text-accent font-bold text-sm group-hover:gap-3 transition-all duration-300">
+                                <span>Read Full Playbook</span>
+                                <span>→</span>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-5 bg-primary text-white rounded-2xl p-8 relative overflow-hidden flex flex-col justify-between h-full min-h-[240px]">
+                            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-accent opacity-20 rounded-full blur-2xl"></div>
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-accent font-bold block mb-2">Key Takeaway</span>
+                                <p class="text-gray-200 text-sm leading-relaxed">
+                                    Essential tactical recommendations for CTOs and Talent Acquisition Leaders looking to compress hiring cycles.
+                                </p>
+                            </div>
+                            <div class="pt-6 border-t border-gray-800 flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent text-xs font-bold">
+                                    GW
+                                </div>
+                                <div class="text-xs">
+                                    <strong class="block text-white">Gigworx Research Group</strong>
+                                    <span class="text-gray-400">Published in Executive Hiring</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+
+            <!-- Remaining Articles Grid -->
+            {{ if gt (len $regularPages) 1 }}
+            <div class="mb-12">
+                <h3 class="text-2xl font-heading font-bold text-primary mb-8">Latest Articles &amp; Analysis</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {{ range after 1 $regularPages }}
+                    <article class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl hover:border-accent transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-4">
+                                <span class="px-2.5 py-1 bg-orange-50 text-accent text-xs font-semibold rounded-md border border-orange-100">
+                                    {{ with .Params.category }}{{ . }}{{ else }}Recruitment Strategy{{ end }}
+                                </span>
+                                <span class="text-xs text-gray-400 font-medium">
+                                    {{ .ReadingTime }} min read
+                                </span>
+                            </div>
+
+                            <h4 class="text-xl font-heading font-bold text-primary group-hover:text-accent transition-colors duration-200 mb-3 leading-snug">
+                                <a href="{{ .RelPermalink }}">
+                                    {{ .Title }}
+                                </a>
+                            </h4>
+
+                            <p class="text-secondary text-sm leading-relaxed mb-6">
+                                {{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 140 }}{{ end }}
+                            </p>
+                        </div>
+
+                        <div class="border-t border-gray-100 pt-5 flex items-center justify-between">
+                            <span class="text-xs text-gray-400 font-medium">
+                                {{ .Date.Format "Jan 2, 2006" }}
+                            </span>
+                            <a href="{{ .RelPermalink }}" class="text-accent text-xs font-bold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                                Read More <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+
+        {{ else }}
+            <div class="text-center py-20 bg-white rounded-3xl border border-gray-200">
+                <span class="text-5xl block mb-4">📝</span>
+                <h3 class="text-2xl font-heading font-bold text-primary mb-2">Publishing In Progress</h3>
+                <p class="text-secondary text-sm max-w-md mx-auto">Our research team is compiling the latest 2026 talent benchmarking whitepapers. Check back shortly!</p>
+            </div>
+        {{ end }}
+
+    </div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="py-20 bg-primary text-white text-center">
+    <div class="container mx-auto px-6 max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
+            Accelerate Your Technical Hiring
+        </h2>
+        <p class="text-gray-300 mb-8 max-w-xl mx-auto">
+            Looking for specialized engineers or leadership candidates? Connect directly with our domain practice leads.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="/#contact" class="bg-accent text-white px-8 py-3.5 rounded-full font-bold hover:bg-orange-600 transition shadow-lg">
+                Talk to a Practice Lead
+            </a>
+            <a href="/services/" class="border border-gray-600 text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white/10 transition">
+                View Service Models
+            </a>
+        </div>
+    </div>
+</section>
+
+{{ partial "footer.html" . }}
